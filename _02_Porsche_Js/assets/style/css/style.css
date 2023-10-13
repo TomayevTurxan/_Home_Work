@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+}
+
+p {
+  font-family: sans-serif;
+  color: white;
+}
+
+span {
+  font-family: sans-serif;
+  color: white;
+}
+
+i {
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 60px 0px;
+}
+
+#nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 30px 0px;
+}
+#nav .nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav .nav-head .menu .fa-magnifying-glass {
+  display: none;
+}
+#nav .nav-head .img-logo {
+  width: 20%;
+  height: 100%;
+}
+#nav .nav-head .img-logo svg {
+  width: 100%;
+  fill: white;
+}
+#nav .nav-head .img-logo img {
+  display: none;
+}
+#nav .nav-head .icons i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+#hero {
+  background-image: url("https://assets-v2.porsche.com/us/-/media/Project/PCOM/SharedSite/Banner-Rotation---Archive/Taycan/Taycan-Push/02---Taycan-Push.jpg?rev=a8ccc765c253409cb6e18fcca71ed5be&extension=webp&w=1759&q=85");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  height: 100vh;
+}
+#hero .head-photo {
+  width: 40%;
+  padding-top: 7rem;
+}
+#hero .head-photo h1 {
+  font-size: 70px;
+}
+#hero .head-photo .btn {
+  padding: 0;
+  margin-top: 30px;
+}
+#hero .head-photo .btn a {
+  padding: 20px 20px;
+  width: 54px;
+  height: 54px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+#hero .head-photo .btn a:hover {
+  background-color: rgba(148, 149, 152, 0.18);
+  border-color: rgb(136, 137, 140);
+}
+
+#blog .container {
+  max-width: 1000px;
+}
+#blog .imgbox {
+  background-image: url("https://assets-v2.porsche.com/us/-/media/Project/PCOM/SharedSite/Banner-Rotation---Archive/Motorsport/2023/2023---KW40---PCNA---Rennsport-Reunion.jpg?rev=-1&amp;extension=webp&amp;w=2500&amp;q=85");
+  background-size: cover;
+  width: 90%;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+#blog .imgbox img {
+  width: 100%;
+  background-size: cover;
+  transition: 0.3s;
+}
+#blog .imgbox img:hover {
+  transform: scale(1.1);
+}
+#blog .imgbox .head-title {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 18px;
+  bottom: 7%;
+  width: 100%;
+}
+
+#models .container {
+  max-width: 1000px;
+}
+#models .head-title {
+  text-align: center;
+}
+#models .head-title h1 {
+  color: black;
+}
+#models .imgbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#models .imgbox:hover img {
+  transform: scale(1.1);
+}
+#models .imgbox img {
+  width: 100%;
+  transition: 0.5s;
+}
+#models .imgbox .title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+}
+#models .imgbox .title h2 {
+  font-size: 1.5rem;
+}
+#models .imgbox .title .btn {
+  width: 100%;
+  padding: 0;
+}
+#models .imgbox .title .btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid rgb(251, 252, 255);
+  border-radius: 4px;
+  background-color: rgb(251, 252, 255);
+  color: rgb(1, 2, 5);
+  padding: 13px 26px;
+  transition: 0.5s;
+}
+#models .imgbox .title .btn a:hover {
+  background-color: rgb(175, 176, 179);
+  border-color: rgb(175, 176, 179);
+}
+#models .imgbox .title .btn .secondly-btn {
+  background-color: transparent;
+  color: white;
+}
+#models .imgbox .title .btn .secondly-btn:hover {
+  background-color: rgba(148, 149, 152, 0.18);
+  border-color: rgb(136, 137, 140);
+}
+
+@media (max-width: 768px) {
+  #nav .nav-head .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #nav .nav-head .menu i {
+    margin-left: 13px;
+    font-size: 18px;
+  }
+  #nav .nav-head .menu .fa-magnifying-glass {
+    display: block;
+  }
+  #nav .nav-head .menu span {
+    display: none;
+  }
+  #nav .nav-head .img-logo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  #nav .nav-head .img-logo svg {
+    display: none;
+  }
+  #nav .nav-head .img-logo img {
+    width: 40px;
+    display: block;
+  }
+  #nav .nav-head .icons .fa-magnifying-glass {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  #hero .head-photo {
+    padding-top: 14rem;
+    width: 100%;
+  }
+  #hero .head-photo h1 {
+    font-size: 50px;
+  }
+  #blog .imgbox {
+    width: 70%;
+  }
+}
+@media (max-width: 1200px) {
+  #hero .head-photo {
+    padding-top: 10rem;
+    width: 80%;
+  }
+  #hero .head-photo h1 {
+    font-size: 40px;
+  }
+  #models .imgbox {
+    margin: 0 auto;
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */

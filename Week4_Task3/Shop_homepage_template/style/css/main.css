@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+#nav {
+  padding: 20px 0px;
+}
+#nav .menu {
+  display: none;
+}
+#nav .navbar-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav .navbar-head .logo {
+  margin-right: 20px;
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+}
+#nav .navbar-head .navbar-body {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav .navbar-head .navbar-body ul {
+  display: flex;
+}
+#nav .navbar-head .navbar-body ul li a {
+  margin-right: 15px;
+  color: black;
+}
+#nav .navbar-head .navbar-body .button button {
+  padding: 8px 15px;
+  border: none;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#nav .navbar-head .navbar-body .button button i {
+  margin-right: 5px;
+}
+#nav .navbar-head .navbar-body .button button span {
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  padding: 1px 8px;
+  margin-left: 5px;
+}
+
+#hero {
+  background-color: #212529;
+}
+#hero .head-title {
+  margin: 0px auto;
+  padding: 100px 0px;
+  width: 50%;
+  text-align: center;
+}
+#hero .head-title h1 {
+  font-size: 3.5rem;
+  color: white;
+  font-weight: 700;
+}
+#hero .head-title span {
+  font-size: 1.25rem;
+  color: #909191;
+}
+
+#blog .imgbox {
+  width: 100%;
+}
+#blog .imgbox img {
+  width: 100%;
+  height: 100%;
+}
+#blog .blog-head {
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+#blog .blog-head .blog-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+#blog .blog-head .blog-title .button {
+  margin-top: 20px;
+  overflow: hidden;
+}
+#blog .blog-head .blog-title .button a {
+  overflow: hidden;
+}
+#blog .blog-head .blog-title .button a button {
+  border: none;
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  #nav {
+    padding: 20px 0px;
+  }
+  #nav .menu {
+    display: block;
+  }
+  #nav .navbar-head .navbar-body {
+    width: 60%;
+    justify-content: flex-end;
+  }
+  #nav .navbar-head .navbar-body ul {
+    display: none;
+  }
+  #nav .navbar-head .navbar-body .menu i {
+    padding: 10px;
+    border: 1px solid grey;
+    font-size: 25px;
+  }
+  #nav .navbar-head .navbar-body .btn {
+    display: none;
+  }
+  #hero .head-title h1 {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=main.css.map */
