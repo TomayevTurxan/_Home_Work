@@ -28,6 +28,9 @@ function Product(
       this.soldQuantity += sellQuantity;
       this.stockQuantity -= sellQuantity;
     }
+    else{
+      alert("ala bilmez")
+    }
   };
   this.calculateProfit = function () {
     return (this.salePrice - this.costPrice) * this.soldQuantity;
