@@ -1,0 +1,81 @@
+#section {
+  width: 100%;
+  height: 100%;
+}
+#section .container {
+  max-width: 960px;
+}
+#section .row {
+  margin: 20px 0px;
+}
+#section .imgbox {
+  width: 960px;
+  height: 360px;
+  margin: 0 auto;
+}
+#section .imgbox img {
+  width: 100%;
+  height: 100%;
+}
+#section .headBox {
+  width: 100%;
+  background-color: #333333;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section .headBox span {
+  font-size: 50px;
+  color: white;
+}
+#section .blog {
+  display: flex;
+  padding: 0;
+}
+#section .blog .box {
+  padding-right: 10px;
+}
+#section .blog .box .imgbox2 {
+  border: 3px solid rgb(216, 216, 216);
+  padding: 3px;
+  width: 100%;
+  height: 180px;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section .blog .box .imgbox2 span {
+  font-size: 25px;
+  color: white;
+}
+#section .blog .box .imgbox2 img {
+  width: 100%;
+}
+#section .blog .box .boxTitle {
+  margin: 10px 0px;
+}
+#section .blog .box .boxTitle h5 {
+  color: grey;
+  font-style: italic;
+}
+#section .blog .box .boxTitle p {
+  color: grey;
+  font-size: 13px;
+}
+#section .blog .box .boxTitle .link {
+  display: flex;
+  justify-content: flex-end;
+}
+#section .blog .box .boxTitle .link a {
+  color: rgb(197, 146, 19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+#section .blog .box .boxTitle .link a i {
+  margin-left: 5px;
+}/*# sourceMappingURL=style.css.map */
