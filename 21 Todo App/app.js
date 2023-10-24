@@ -34,7 +34,8 @@ add.addEventListener("click", () => {
     let doneButton = document.querySelectorAll(".done")
     doneButton.forEach(done => {
         done.addEventListener("click",(e)=>{
-            e.target.parentElement.parentElement.parentElement.style.textDecoration = "line-through";
+          console.log(e.target.parentElement.parentElement);
+            e.target.parentElement.parentElement.style.textDecoration = "line-through";
         })
     });
 
