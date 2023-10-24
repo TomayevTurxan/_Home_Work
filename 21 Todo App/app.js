@@ -14,7 +14,7 @@ add.addEventListener("click", () => {
     tbody.innerHTML += `
         <tr>
             <td>${input.value}</td>
-            <td><button class="btn btn-danger remove">Delete</button></td>
+            <td><button class="btn btn-danger remove"><i class="fa-solid fa-trash"></i></button></td>
             <td><button type="button" class="btn btn-outline-success done"><i class="fa-solid fa-check"></i></button></td>
         </tr>
     `;
