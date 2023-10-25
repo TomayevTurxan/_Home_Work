@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  max-width: 80%;
+  height: 100vh;
+  margin: 30px auto;
+}
+section .accordion {
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+section .accordion h1 {
+  text-align: center;
+  color: rgb(233, 243, 42);
+  font-size: 50px;
+}
+section .accordion .accordion-item {
+  border: 1px solid rgb(219, 219, 219);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+section .accordion .accordion-item i {
+  transition: 0.3s ease;
+  margin-right: 20px;
+  transform-origin: center;
+}
+section .accordion .accordion-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s linear;
+}
+section .accordion .active {
+  max-height: 300px;
+  animation: shape 0.3s ease;
+}
+section .accordion .rotate {
+  transform: rotate(180deg);
+}
+
+@keyframes shape {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=style.css.map */
