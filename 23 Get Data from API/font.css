@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-Bold.woff2') format('woff2'),
+        url('SometypeMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-Italic.woff2') format('woff2'),
+        url('SometypeMono-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-BoldItalic.woff2') format('woff2'),
+        url('SometypeMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-Regular.woff2') format('woff2'),
+        url('SometypeMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-SemiBold.woff2') format('woff2'),
+        url('SometypeMono-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-Medium.woff2') format('woff2'),
+        url('SometypeMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-SemiBoldItalic.woff2') format('woff2'),
+        url('SometypeMono-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sometype Mono';
+    src: url('SometypeMono-MediumItalic.woff2') format('woff2'),
+        url('SometypeMono-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
