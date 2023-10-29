@@ -13,7 +13,7 @@ async function fetchData() {
   categories = await response.json();
   if (response.status == 200) {
     console.log(categories);
-    loading.classList.replace("d-flex", "d-none");
+    loading.classList.replace("d-flex", "d-none")
 
     cardsWrapper.innerHTML = "";
     categories.forEach((category) => {
@@ -113,5 +113,17 @@ function renderCategories() {
           <td><button type="button" class="btn btn-outline-success">Learn More</button></td>
       </tr>
       `;
+  });
+  let openModalButtons = document.querySelectorAll(".btn-modal");
+  openModalButtons.forEach((button,index) => {
+    button.addEventListener("click", async () => {
+        console.log(index);
+        const selectedCategory = categories[index]
+      Swal.fire({
+        title: `Name:${selectedCategory.name}`,
+        text:  `Adress street:${selectedCategory.address.street},Adress suite:${selectedCategory.address.suite} ,  Adress city:${selectedCategory.address.city}`, 
+        footer: `Phone: ${selectedCategory.phone}`,
+      });
+    });
   });
 }

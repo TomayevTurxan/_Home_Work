@@ -1,0 +1,63 @@
+{
+  "books": [{
+      "id": 1,
+      "name": "Milenaya Mektublar",
+      "pageCount": 352,
+      "coverImage": "https://kitabevim.az/wp-content/uploads/2021/02/2019-11-25-11-01-041574665264.png",
+      "author": "Frans Kafka",
+      "year": 1906,
+      "description": " Kafkanın daimi qorxu hissi və Milenanın ziddiyyətli xarakteri onların xoşbəxtliyini qeyri-mümkün .",
+      "genre": "Drama"
+    },
+    {
+      "id": 2,
+      "name": "Bu seherde heckim yoxdur",
+      "pageCount": 200,
+      "coverImage": "https://rovshanabdullaoglu.com/uploads/books/60756b86cc67e.png",
+      "author": "Rovsen Abdullaoglu",
+      "year": 2000,
+      "description": "Heyatin cetin anlarinda qarsimiza cixardigi sanslar.",
+      "genre": "Science Fiction"
+    },
+    {
+      "id": 3,
+      "name": "Cerpeleng ucuran",
+      "pageCount": 328,
+      "coverImage": "https://assets1.bmstatic.com/assets/books-covers/1b/b9/ipad-e83c8eba0764149c627ea9f83510d8cc.jpeg",
+      "author": "Xaliq Huseyov",
+      "year": 2005,
+      "description": " “Çərpələng uçuran” bu an yaşanan müstəmləkəçilik ve muharibe haqqinda.",
+      "genre": "Thriller"
+    },
+    {
+      "id": 4,
+      "name": "fITNESS",
+      "pageCount": 671,
+      "coverImage": "https://m.media-amazon.com/images/I/61VPEERrnbL._AC_UF1000,1000_QL80_.jpg",
+      "author": "Tomayev Turxan",
+      "year": 2023,
+      "description": "Idman saglamliqdir , idmana aid hersey burada!",
+      "genre": "Fantastik"
+    },
+    {
+      "id": 5,
+      "name": "10 kicik zenci",
+      "pageCount": 332,
+      "coverImage": "https://img.kitapyurdu.com/v1/getImage/fn:7054659/wh:true/wi:800",
+      "author": " Agatha Christie",
+      "year": 1997,
+      "description": "Her birinin gizledikleri ve korktukları sırları olan on kişi, Zenci Adası’ndaki ıssız bir malikâneye davet edilirler. Ancak malikâneye giden .",
+      "genre": "Detective"
+    },
+    {
+      "id": 6,
+      "name": "Qaraqan",
+      "pageCount": 163,
+      "coverImage": "https://static.insales-cdn.com/images/products/1/4321/197177569/Qaraqan_qapaq_Birinci_Addim.png",
+      "author": "Paulo Coelho",
+      "year": 1988,
+      "description": "Cəmi beşcə ilin içində o qədər irəliləyə bilmişdim ki, bu çox adam üçün təəccüblü də görünə bilərdi.",
+      "genre": "Drama"
+    }
+  ]
+}
