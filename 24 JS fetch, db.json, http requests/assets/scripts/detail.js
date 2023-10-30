@@ -1,4 +1,4 @@
-let base_url = 'http://localhost:3000/books';
+let base_url = 'http://localhost:3000';
 let booksWrapper2 = document.querySelector('.books-wrapper');
 let id = new URLSearchParams(location.search).get('id');
 console.log(id);

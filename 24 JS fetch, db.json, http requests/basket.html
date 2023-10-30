@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style/css/style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <div class="row">
+                <div class="nav-bar">
+                    <div class="logo">
+                        <div class="img-box">
+                            <img src="https://static.vecteezy.com/system/resources/previews/004/235/492/non_2x/tt-logo-monogram-emblem-style-with-crown-shape-design-template-free-vector.jpg"
+                                alt="">
+                        </div>
+                        <span>TT club</span>
+                    </div>
+                    <div class="links">
+                        <ul class="d-flex justify-content-center align-item-center">
+                            <li>
+                                <a href="index.html">Home</a>
+                                <a href="books.html">Books</a>
+                            </li>
+                            <li class="basket-header">
+                                <a href="basket.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+                                <span class="quantity">1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ad</th>
+                    <th>Şəkil</th>
+                    <th>Qiymət</th>
+                    <th>Say</th>
+                    <th>Ümumi Qiymət</th>
+                    <th>increase/decrease</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>1</td>
+                    <td>Milenaya mektublar</td>
+                    <td><img src="https://rovshanabdullaoglu.com/uploads/books/60756b86cc67e.png" alt=""></td>
+                    <td>300azn</td>
+                    <td>1</td>
+                    <td>360azn</td>
+                    <td>
+                        <button type="button" class="btn btn-danger">-</button>
+                        <button type="button" class="btn btn-success">+</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="cart-total">
+            <p>Ümumi Məhsul Sayı: <span id="total-items">0</span></p>
+            <p>Ümumi Qiymət: <span id="total-price">$0</span></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/assets/scripts/books.js"></script>
+</body>
+
+</html>

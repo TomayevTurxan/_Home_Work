@@ -4,6 +4,8 @@ let SeachBook = document.querySelector("#search-input");
 let sortYear = document.querySelector(".sort-year");
 let loading = document.querySelector(".spinner-wrapper");
 let selectButton = document.querySelector(".form-select");
+let saveBtn = document.querySelector(".save-btn");
+let addBtn = document.querySelector(".add-btn");
 let books = [];
 
 async function fetchData() {
@@ -34,8 +36,9 @@ async function fetchData() {
                 <span class="card-author">Kitabin müəllifi:${book.author}</span>
                 <div class="edited-buttons">
                     <button type="button" class="btn btn-danger delete-btn" data-id="${book.id}"><i class="fa-solid fa-trash"></i></button>
-                    <button type="button" class="btn btn-success edit-btn" data-id="${book.id}"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button data-img="${book.coverImage}" data-name="${book.name}" data-desc="${book.description}"  data-year="${book.year}" data-page="${book.pageCount}" data-author="${book.author}" type="button" class="btn btn-success edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
                     <a href="detail.html?id=${book.id}" class="btn btn-primary btn-details">Go to Details</a>
+                    <button data-id="${book.id}" type="button" class="btn btn-secondary cart-shopping"><i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
         </div>
@@ -65,37 +68,60 @@ async function fetchData() {
           });
         });
 
+        //edit btn
+        let editBookName = document.querySelector("#editBookName");
+        let editDescription = document.querySelector("#editDescription");
+        let editAuthor = document.querySelector("#editAuthor");
+        let editYear = document.querySelector("#editYear");
+        let editPageCount = document.querySelector("#editPageCount");
+        let editCoverImage = document.querySelector("#editCoverImage");
+
         let editButtons = document.querySelectorAll(".edit-btn");
         editButtons.forEach((edit) => {
           edit.addEventListener("click", function () {
-            Swal.fire({
-              title: "Edit to do",
-              input: "text",
-              inputValue: this.parentElement.previousElementSibling.textContent,
-              inputAttributes: {
-                autocapitalize: "off",
-              },
-              showCancelButton: true,
-              confirmButtonText: "Update",
-            }).then((result) => {
-              if (result.isConfirmed) {
-                if (result.value.trim() === "") {
-                  Swal.fire({
-                    title: `input cannot be empty!`,
-                    icon: "warning",
-                  });
-                } else {
-                  this.parentElement.previousElementSibling.textContent =
-                    result.value;
-                  Swal.fire({
-                    title: `Updated successfully!`,
-                  });
-                }
+            let img = this.getAttribute("data-img");
+            let name = this.getAttribute("data-name");
+            let desc = this.getAttribute("data-desc");
+            let year = this.getAttribute("data-year");
+            let pageCount = this.getAttribute("data-page");
+            let author = this.getAttribute("data-author");
+            let id = this.previousElementSibling.getAttribute("id");
+
+            editCoverImage.value = img;
+            editBookName.value = name;
+            editDescription.value = desc;
+            editYear.value = year;
+            editPageCount.value = pageCount;
+            editAuthor.value = author;
+
+            let editForm = document.querySelector("#editForm");
+            console.log(editForm);
+            editForm.addEventListener("submit", async (e) => {
+              e.preventDefault();
+
+              try {
+                let response = await fetch(`http://localhost:3000`+`/books/${id}`, {
+                  method: "PUT",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    coverImage: editCoverImage.value,
+                    name: editBookName.value,
+                    pageCount: editCoverImage.value,
+                    author: editAuthor.value,
+                    year: editYear.value,
+                    description: editDescription.value,
+                  }),
+                });
+              } catch (error) {
+                console.log(error);
               }
             });
           });
         });
 
+        //name click edende modal acilmasi
         let bookNames = document.querySelectorAll(".card-title");
         bookNames.forEach((title, index) => {
           title.addEventListener("click", async () => {
@@ -110,11 +136,52 @@ async function fetchData() {
             });
           });
         });
+
+
+        //baskete click olundugda
+        let addCardButtons = document.querySelectorAll(".cart-shopping")
+        addCardButtons.forEach(btn => {
+          btn.addEventListener("click",function(){
+            fetch(`http://localhost:3000`+`/books/${this.id}`)
+            .then((res)=>res.json())
+            .then((product)=>{//islemir herdefesinde locala id-si 1 olanlarida atir
+              const productId = this.getAttribute("data-id");
+              const selectedProduct = books.find(product => product.id == productId);
+              if (selectedProduct) {
+                if (JSON.parse(localStorage.getItem("cart"))===null) {
+                  selectedProduct.quantity = 1
+                  localStorage.setItem("cart",JSON.stringify([selectedProduct]))
+                }else{
+                  let card = JSON.parse(localStorage.getItem("cart"))
+                  let found = card.find((x)=>x.id==selectedProduct.id)
+                  if (found) {
+                    found.quantity++
+                  }else{
+                    selectedProduct.quantity = 1
+                    card.push(product)
+                  }
+                  localStorage.setItem("cart",JSON.stringify([...card,selectedProduct]))
+                }
+              }
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Book added to cart',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            })
+          })
+        });
       });
     }
   } catch (error) {
     console.log(error);
   }
+
+  addBtn.addEventListener("click", () => {
+    alert("ads");
+  });
 }
 fetchData();
 
