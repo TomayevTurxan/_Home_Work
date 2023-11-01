@@ -6,6 +6,7 @@ let loading = document.querySelector(".spinner-wrapper");
 let selectButton = document.querySelector(".form-select");
 let saveBtn = document.querySelector(".save-btn");
 let addBtn = document.querySelector(".add-btn");
+let basketCount  = document.querySelector(".basketCount")
 let books = [];
 
 async function fetchData() {
@@ -38,7 +39,7 @@ async function fetchData() {
                     <button type="button" class="btn btn-danger delete-btn" data-id="${book.id}"><i class="fa-solid fa-trash"></i></button>
                     <button data-img="${book.coverImage}" data-name="${book.name}" data-desc="${book.description}"  data-year="${book.year}" data-page="${book.pageCount}" data-author="${book.author}" type="button" class="btn btn-success edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
                     <a href="detail.html?id=${book.id}" class="btn btn-primary btn-details">Go to Details</a>
-                    <button data-id="${book.id}" type="button" class="btn btn-secondary cart-shopping"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button id="${book.id}" type="button" class="btn btn-secondary cart-shopping"><i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
             </div>
         </div>
@@ -145,31 +146,31 @@ async function fetchData() {
             fetch(`http://localhost:3000`+`/books/${this.id}`)
             .then((res)=>res.json())
             .then((product)=>{//islemir herdefesinde locala id-si 1 olanlarida atir
-              const productId = this.getAttribute("data-id");
-              const selectedProduct = books.find(product => product.id == productId);
-              if (selectedProduct) {
-                if (JSON.parse(localStorage.getItem("cart"))===null) {
-                  selectedProduct.quantity = 1
-                  localStorage.setItem("cart",JSON.stringify([selectedProduct]))
-                }else{
-                  let card = JSON.parse(localStorage.getItem("cart"))
-                  let found = card.find((x)=>x.id==selectedProduct.id)
-                  if (found) {
-                    found.quantity++
-                  }else{
-                    selectedProduct.quantity = 1
-                    card.push(product)
-                  }
-                  localStorage.setItem("cart",JSON.stringify([...card,selectedProduct]))
-                }
+              // console.log(product);
+              product.quantity = 1
+              if (JSON.parse(localStorage.getItem("cart"))==null) {
+                  localStorage.setItem("cart",JSON.stringify([product]))
+                  console.log(basketCount);
+                  basketCount.textContent = JSON.parse(localStorage.getItem("cart")).length;
+              }else{
+                   let card = JSON.parse(localStorage.getItem("cart"))
+                   let found = card.find((x)=>x.id === product.id)
+                   if (found) {
+                      found.quantity++;
+                    localStorage.setItem("cart",JSON.stringify([...card]))
+                   }else{
+                    localStorage.setItem("cart",JSON.stringify([...card,product]))
+                    basketCount.textContent = JSON.parse(localStorage.getItem("cart")).length;
+                    console.log(basketCount.textContent);
+                   }
               }
-              Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Book added to cart',
-                showConfirmButton: false,
-                timer: 1500
-              })
+            })
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Book added to cart',
+              showConfirmButton: false,
+              timer: 1500
             })
           })
         });
@@ -178,6 +179,7 @@ async function fetchData() {
   } catch (error) {
     console.log(error);
   }
+  basketCount.textContent = JSON.parse(localStorage.getItem("cart")).length;
 
   addBtn.addEventListener("click", () => {
     alert("ads");
