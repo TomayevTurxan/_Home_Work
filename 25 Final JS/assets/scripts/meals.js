@@ -10,7 +10,7 @@ axios.get(BASE_URL+`/meals`).then((result) => {
     meals.forEach((card) => {
         console.log(card);
       mealsWrapper.innerHTML += `
-      <div class="col-3 mt-3 mr-3">
+      <div class="col-xl-3 col-lg-4 mt-3 mr-3">
       <div class="card" style="width: 18rem;">
           <img class="card-img-top"
               src="${card.imageLink}"
@@ -45,7 +45,7 @@ axios.get(BASE_URL+`/meals`).then((result) => {
               this.parentElement.parentElement.parentElement.remove();
 
               //db.json remove etmek
-              axios.delete(BASE_URL + `/rappers/${card.id}`);
+              axios.delete(BASE_URL + `/meals/${card.id}`);
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           });

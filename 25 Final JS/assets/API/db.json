@@ -1,97 +1,118 @@
 {
-    "rappers": [
-        {
-            "id": 1,
-            "name": "Eminem",
-            "imagelink": "https://www.ocregister.com/wp-content/uploads/migration/kpj/kpja2d-21eminem12lg.jpg?w=620",
-            "age": 49,
-            "nationality": "American",
-            "genre": "Rap"
-        },
-        {
-            "id": 2,
-            "name": "Jay-Z",
-            "imagelink": "https://i8.amplience.net/i/naras/MI0005148022-MN0000224257",
-            "age": 52,
-            "nationality": "American",
-            "genre": "Rap"
-        },
-        {
-            "id": 3,
-            "name": "Kendrick Lamar",
-            "imagelink": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pulitzer2018-portraits-kendrick-lamar.jpg",
-            "age": 35,
-            "nationality": "American",
-            "genre": "Rap"
-        },
-        {
-            "id": 4,
-            "name": "Nicki Minaj",
-            "imagelink": "https://media.npr.org/assets/img/2023/09/01/minaj_custom-1f4474b5875bbfb4e550911452ea477b641e238d.jpg",
-            "age": 39,
-            "nationality": "Trinidadian-American",
-            "genre": "Rap"
-        },
-        {
-            "id": 5,
-            "name": "Drake",
-            "imagelink": "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2023/10/17/737f015c-a9ef-4020-9df5-83a9bc70ff96_5ed13648.jpg?itok=akNoFjFy&v=1697537122",
-            "age": 35,
-            "nationality": "Canadian",
-            "genre": "Rap"
-        },
-        {
-            "id": 6,
-            "name": "Kanye West",
-            "imagelink": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg/640px-Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg",
-            "age": 44,
-            "nationality": "American",
-            "genre": "Rap"
-        }
-    ],
-    "meals":[
-            {
-              "id": 1,
-              "name": "Pizza",
-              "price": 10.99,
-              "ingredients": ["Domates", "Peynir", "Sosis", "Biber"],
-              "imageLink": "https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*"
-            },
-            {
-              "id": 2,
-              "name": "Hamburger",
-              "price": 8.99,
-              "ingredients": ["Dana eti", "Ketçap", "Marul", "Turşu"],
-              "imageLink": "https://heygrillhey.com/static/47c08cf31c9c6df778aee3088264eddf/Smoked-Hamburgers-Feature.png"
-            },
-            {
-              "id": 3,
-              "name": "Makarna",
-              "price": 6.99,
-              "ingredients": ["Spagetti", "Domates sosu", "Biber", "Zeytinyağı"],
-              "imageLink": "https://d17wu0fn6x6rgz.cloudfront.net/img/w/tarif/ogt/domates-soslu-makarna-ay6i3682-204.webp"
-            },
-            {
-              "id": 4,
-              "name": "Tavuk Izgara",
-              "price": 12.99,
-              "ingredients": ["Tavuk göğsü", "Baharatlar", "Zeytin yağı", "Limon"],
-              "imageLink": "https://cdn.yemek.com/mnresize/1250/833/uploads/2023/04/izgara-tavuk-onecikan.jpg"
-            },
-            {
-              "id": 5,
-              "name": "Salata",
-              "price": 5.99,
-              "ingredients": ["Marul", "Domates", "Salatalık", "Zeytin"],
-              "imageLink": "https://cdn.yemek.com/mnresize/1250/833/uploads/2016/06/ferah-salata-sunum-yemekcom.jpg"
-            },
-            {
-              "id": 6,
-              "name": "Sushi",
-              "price": 14.99,
-              "ingredients": ["Somon balığı", "Nori yosunu", "Pirinç", "Avokado"],
-              "imageLink": "https://cdn.tasteatlas.com/Images/Dishes/fde953e5aa504e8c83a84691582b0399.jpg?m=facebook"
-            }
-          
-    ]
+  "rappers": [
+    {
+      "id": 1,
+      "name": "Eminem",
+      "imagelink": "https://www.ocregister.com/wp-content/uploads/migration/kpj/kpja2d-21eminem12lg.jpg?w=620",
+      "age": 49,
+      "nationality": "American",
+      "genre": "Rap"
+    },
+    {
+      "id": 2,
+      "name": "Jay-Z",
+      "imagelink": "https://i8.amplience.net/i/naras/MI0005148022-MN0000224257",
+      "age": 52,
+      "nationality": "American",
+      "genre": "Rap"
+    },
+    {
+      "id": 3,
+      "name": "Kendrick Lamar",
+      "imagelink": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pulitzer2018-portraits-kendrick-lamar.jpg",
+      "age": 35,
+      "nationality": "American",
+      "genre": "Rap"
+    },
+    {
+      "id": 4,
+      "name": "Nicki Minaj",
+      "imagelink": "https://media.npr.org/assets/img/2023/09/01/minaj_custom-1f4474b5875bbfb4e550911452ea477b641e238d.jpg",
+      "age": 39,
+      "nationality": "Trinidadian-American",
+      "genre": "Rap"
+    },
+    {
+      "id": 5,
+      "name": "Drake",
+      "imagelink": "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2023/10/17/737f015c-a9ef-4020-9df5-83a9bc70ff96_5ed13648.jpg?itok=akNoFjFy&v=1697537122",
+      "age": 35,
+      "nationality": "Canadian",
+      "genre": "Rap"
+    }
+  ],
+  "meals": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "price": 10.99,
+      "ingredients": [
+        "Domates",
+        "Peynir",
+        "Sosis",
+        "Biber"
+      ],
+      "imageLink": "https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*"
+    },
+    {
+      "id": 2,
+      "name": "Hamburger",
+      "price": 8.99,
+      "ingredients": [
+        "Dana eti",
+        "Ketçap",
+        "Marul",
+        "Turşu"
+      ],
+      "imageLink": "https://heygrillhey.com/static/47c08cf31c9c6df778aee3088264eddf/Smoked-Hamburgers-Feature.png"
+    },
+    {
+      "id": 3,
+      "name": "Makarna",
+      "price": 6.99,
+      "ingredients": [
+        "Spagetti",
+        "Domates sosu",
+        "Biber",
+        "Zeytinyağı"
+      ],
+      "imageLink": "https://d17wu0fn6x6rgz.cloudfront.net/img/w/tarif/ogt/domates-soslu-makarna-ay6i3682-204.webp"
+    },
+    {
+      "id": 4,
+      "name": "Tavuk Izgara",
+      "price": 12.99,
+      "ingredients": [
+        "Tavuk göğsü",
+        "Baharatlar",
+        "Zeytin yağı",
+        "Limon"
+      ],
+      "imageLink": "https://cdn.yemek.com/mnresize/1250/833/uploads/2023/04/izgara-tavuk-onecikan.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Salata",
+      "price": 5.99,
+      "ingredients": [
+        "Marul",
+        "Domates",
+        "Salatalık",
+        "Zeytin"
+      ],
+      "imageLink": "https://cdn.yemek.com/mnresize/1250/833/uploads/2016/06/ferah-salata-sunum-yemekcom.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Sushi",
+      "price": 14.99,
+      "ingredients": [
+        "Somon balığı",
+        "Nori yosunu",
+        "Pirinç",
+        "Avokado"
+      ],
+      "imageLink": "https://cdn.tasteatlas.com/Images/Dishes/fde953e5aa504e8c83a84691582b0399.jpg?m=facebook"
+    }
+  ]
 }
