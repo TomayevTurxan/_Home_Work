@@ -25,7 +25,7 @@
                             alt="Spotify">
                     </div>
                     <div class="navbar-links ">
-                        <ul class="d-flex">
+                        <ul class="d-flex align-items-center">
                             <li>
                                 <a href="index.html">Singers</a>
                             </li>
@@ -33,11 +33,25 @@
                                 <a href="meals.html">Meals</a>
                             </li>
                             <li>
-                                <a href="index.html">Basket <sup>0</sup></a>
+                                <a href="basket.html">Basket <sup class="basketListCount">0</sup></a>
                             </li>
                             <li>
                                 <a href="whishlist.html">Whishlist <sup class="whishListCount">0</sup></a>
                             </li>
+                            <div class="open d-flex">
+                                <li>
+                                    <a href="#"><button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal1">Login</button></a>
+                                </li>
+                                <li>
+                                    <a href="#"><button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal2">Register</button></a>
+                                </li>
+                            </div>
+                            <div class="user d-none">
+                                <button type="button" class="btn btn-success">Turxan</button>
+                                <button type="button" class="btn btn-danger">Log-out</button>
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -103,7 +117,7 @@
                                     </div>
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success save-btn">Save changes</button>
+                                    <button type="submit" class="btn btn-success save-btn">Save changes</button>
                                 </form>
                             </div>
                         </div>
@@ -118,6 +132,66 @@
 
 
 
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Username">
+                </div>
+                <div class="mb-3">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary login-btn">Login</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="kullaniciAdi">Istifadeci Adı:</label>
+                    <input type="text" id="newName" placeholder=" Adınızı Yazin ">
+                </div>
+                <div class="mb-3">
+                    <label for="newPassword">Password:</label>
+                    <input type="password" id="newPassword" placeholder="Enter your password (at least 8 characters)">
+                    <span id="passwordError" class="text-danger"></span>
+                </div>  
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bagla</button>
+                <button type="submit" class="btn btn-primary register">Qeydiyyatdan Kec</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
         integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
@@ -127,6 +201,8 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script type="module" src="./assets/scripts/home.js"></script>
+    <script type="module" src="./assets/scripts/login.js"></script>
+    <script type="module" src="./assets/scripts/register.js"></script>
 </body>
 
 </html>

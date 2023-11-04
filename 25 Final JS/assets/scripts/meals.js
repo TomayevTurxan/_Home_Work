@@ -2,6 +2,8 @@ import { BASE_URL } from "./url.js";
 let mealsWrapper = document.querySelector(".meal-wrapper");
 let inpSearch = document.querySelector("#search");
 let sortByName = document.querySelector("#sortByName");
+let basketListCount = document.querySelector(".basketListCount");
+console.log(basketListCount);
 // let whishListCount = document.querySelector(".whishListCount")
 let meals = [];
 axios.get(BASE_URL+`/meals`).then((result) => {
@@ -22,6 +24,7 @@ axios.get(BASE_URL+`/meals`).then((result) => {
               <a  href="mealsDetail.html?id=${card.id}" class="btn btn-primary">Detail</a>
               <button type="button" class="btn btn-outline-danger delete-btn"><i
               class="fa-solid fa-trash"></i></button>
+              <button id=${card.id} type="button" class="btn btn-info btn-basket"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
           </div>
       </div>
@@ -50,6 +53,49 @@ axios.get(BASE_URL+`/meals`).then((result) => {
             }
           });
         });
+      });
+
+      let basketButtons = document.querySelectorAll(".btn-basket")
+      let arr = []
+      if (JSON.parse(localStorage.getItem("basket"))) {
+        arr = JSON.parse(localStorage.getItem("basket"))
+      }
+      basketButtons.forEach(btn => {
+        btn.addEventListener("click",function(){
+          // if (!JSON.parse(localStorage.getItem("basket"))) {
+          //     localStorage.setItem("basket",JSON.stringify([{id:this.id}]))
+          // }else{
+          //   let basketLocal = JSON.parse(localStorage.getItem("basket"))
+          //   let found = basketLocal.find((x)=>x.id == this.id)
+          //   if (found) {
+          //     found.quantity = found.quantity+1
+          //     localStorage.setItem("basket",JSON.stringify([{id:this.id,quantity:1}]))
+          //   }else{
+          //     localStorage.setItem("basket",JSON.stringify([...basketLocal,{id:this.id,quantity:1}]))
+          //   }
+          // }
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your meal has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+          if (arr.find((x)=>x.id == this.id)) {
+            let elem = arr.find((x)=>x.id == this.id)
+            elem.count = elem.count+1
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }else{
+            let obj = {id:this.id,count:1}
+            arr.push(obj)
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }
+        })
       });
 
     });
@@ -97,3 +143,5 @@ function renderMeals(arr) {
     }
   });
 }
+
+basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;

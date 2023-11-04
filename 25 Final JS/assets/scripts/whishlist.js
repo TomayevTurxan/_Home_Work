@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>${singer.genre}</td>
             <td><button id=${singer.id} type="button" class="btn btn-danger delete-btn"><i class="fa-solid fa-trash"></i></button></td>
         </tr>
-            `;
+            `; 
         let deleteButtons = document.querySelectorAll(".delete-btn");
         deleteButtons.forEach((btn) => {
           btn.addEventListener("click", function () {
@@ -46,10 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   localStorage.getItem("cart")
                 ).length;
               } else {
-                localStorage.setItem(
-                  "cart",
-                  JSON.stringify([...cardsLocal, { id: this.id, quantity: 1 }])
-                );
+                localStorage.setItem("cart",JSON.stringify([...cardsLocal, { id: this.id, quantity: 1 }]));
                 whishListCount.textContent = JSON.parse(
                   localStorage.getItem("cart")
                 ).length;

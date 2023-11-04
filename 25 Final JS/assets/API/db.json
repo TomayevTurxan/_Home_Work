@@ -4,25 +4,28 @@
       "id": 1,
       "name": "Eminem",
       "imagelink": "https://www.ocregister.com/wp-content/uploads/migration/kpj/kpja2d-21eminem12lg.jpg?w=620",
-      "age": 49,
+      "age": "20",
       "nationality": "American",
-      "genre": "Rap"
+      "genre": "RAP",
+      "img": "https://www.ocregister.com/wp-content/uploads/migration/kpj/kpja2d-21eminem12lg.jpg?w=620"
     },
     {
       "id": 2,
-      "name": "Jay-Z",
+      "name": "Jay-Zqwddwq",
       "imagelink": "https://i8.amplience.net/i/naras/MI0005148022-MN0000224257",
-      "age": 52,
+      "age": "52",
       "nationality": "American",
-      "genre": "Rap"
+      "genre": "Rap",
+      "img": "https://i8.amplience.net/i/naras/MI0005148022-MN0000224257"
     },
     {
       "id": 3,
-      "name": "Kendrick Lamar",
+      "name": "Kendrick Lamarwadawd",
       "imagelink": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pulitzer2018-portraits-kendrick-lamar.jpg",
-      "age": 35,
-      "nationality": "American",
-      "genre": "Rap"
+      "age": "35",
+      "nationality": "Americanw",
+      "genre": "Rap",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pulitzer2018-portraits-kendrick-lamar.jpg"
     },
     {
       "id": 4,
@@ -45,7 +48,7 @@
     {
       "id": 1,
       "name": "Pizza",
-      "price": 10.99,
+      "price": 10,
       "ingredients": [
         "Domates",
         "Peynir",
@@ -57,7 +60,7 @@
     {
       "id": 2,
       "name": "Hamburger",
-      "price": 8.99,
+      "price": 11,
       "ingredients": [
         "Dana eti",
         "Ketçap",
@@ -69,7 +72,7 @@
     {
       "id": 3,
       "name": "Makarna",
-      "price": 6.99,
+      "price": 12,
       "ingredients": [
         "Spagetti",
         "Domates sosu",
@@ -81,7 +84,7 @@
     {
       "id": 4,
       "name": "Tavuk Izgara",
-      "price": 12.99,
+      "price": 13,
       "ingredients": [
         "Tavuk göğsü",
         "Baharatlar",
@@ -93,7 +96,7 @@
     {
       "id": 5,
       "name": "Salata",
-      "price": 5.99,
+      "price": 14,
       "ingredients": [
         "Marul",
         "Domates",
@@ -105,7 +108,7 @@
     {
       "id": 6,
       "name": "Sushi",
-      "price": 14.99,
+      "price": 15,
       "ingredients": [
         "Somon balığı",
         "Nori yosunu",
@@ -113,6 +116,48 @@
         "Avokado"
       ],
       "imageLink": "https://cdn.tasteatlas.com/Images/Dishes/fde953e5aa504e8c83a84691582b0399.jpg?m=facebook"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "Turxan",
+      "password": "Turxan123"
+    },
+    {
+      "id": 2,
+      "login": "Aydan",
+      "password": "Aydan123"
+    },
+    {
+      "login": "Rəşid",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "login": "t",
+      "password": "1",
+      "id": 4
+    },
+    {
+      "login": "y",
+      "password": "y",
+      "id": 5
+    },
+    {
+      "login": "aaaaaaaaaaaa",
+      "password": "aaaaaa",
+      "id": 6
+    },
+    {
+      "login": "qwwqweqe",
+      "password": "waaa",
+      "id": 7
+    },
+    {
+      "login": "",
+      "password": "wqddqqwdwqdqdqw",
+      "id": 8
     }
   ]
 }

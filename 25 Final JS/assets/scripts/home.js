@@ -11,7 +11,7 @@ axios.get(BASE_URL + `/rappers`).then((result) => {
     singers.forEach((card) => {
       singersWrapper.innerHTML += `
         <div class="col-xl-3 col-lg-4 mt-3 mr-3 gap-3">
-        <div class="card" style="width: 18rem;">
+        <div class="card" id=i${card.id} style="width: 18rem;">
             <img class="card-img-top"
                 src="${card.imagelink}"
                 alt="${card.name}">
@@ -58,36 +58,14 @@ axios.get(BASE_URL + `/rappers`).then((result) => {
 
       let heartButtons = document.querySelectorAll(".favIcon");
       heartButtons.forEach((btn) => {
-        // btn.addEventListener("click",function(e){
-        //     e.target.classList.toggle("active");
-        //     if (e.target.classList.contains("active")) {
-        //         e.target.innerHTML = '<i class="fa-solid fa-heart"></i>';
-        //         if (!JSON.parse(localStorage.getItem("cart"))) {
-        //             localStorage.setItem("cart",JSON.stringify([{id:this.id,quantity:1}]))
-        //         }else{
-        //             let prevCart = JSON.parse(localStorage.getItem("cart"))
-        //             let found = prevCart.find((x)=>x.id == this.id)
-        //             if (found) {
-        //                 found.quantity++
-        //                 localStorage.setItem("cart",JSON.stringify([...prevCart]))
-        //                 console.log(JSON.parse(localStorage.getItem("cart")));
-        //                 // whishListCount.textContent = JSON.parse(localStorage.getItem("cart")).length
-        //             }else{
-        //                 let prevCart = JSON.parse(localStorage.getItem("cart"))
-        //                 let currentSinger = {
-        //                     id: this.id,
-        //                     quantity:1,
-        //                 }
-        //                 localStorage.setItem("cart",JSON.stringify([...prevCart,currentSinger]))
-        //                 whishListCount.textContent = JSON.parse(localStorage.getItem("cart")).length
-        //             }
-        //         }
-        //     }else{
-        //         e.target.innerHTML = '<i class="fa-regular fa-heart"></i>';
-        //     }
-        // })
-
         btn.addEventListener("click", function () {
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your singer card has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
           if (!JSON.parse(localStorage.getItem("cart"))) {
             localStorage.setItem("cart", JSON.stringify([{id:this.id}]));
             this.classList.replace("fa-regular", "fa-solid");
@@ -116,6 +94,7 @@ axios.get(BASE_URL + `/rappers`).then((result) => {
       const nationalityInput = document.querySelector("#nationality");
       const genreInput = document.querySelector("#genre");
       const urlInput = document.querySelector("#url")
+      let edutForm = document.querySelector("#editForm")
       editButtons.forEach(btn => {
           btn.addEventListener("click",function(){
             let img = this.getAttribute("data-img")
@@ -123,8 +102,8 @@ axios.get(BASE_URL + `/rappers`).then((result) => {
             let age = this.getAttribute("data-age")
             let genre = this.getAttribute("data-genre")
             let nationality = this.getAttribute("data-country")
-            
-
+            let id = Number(this.parentElement.parentElement.parentElement.getAttribute("id").slice(1))
+            console.log(id);
             urlInput.value = img
             nameInput.value = name
             ageInput.value = age
@@ -135,7 +114,17 @@ axios.get(BASE_URL + `/rappers`).then((result) => {
             // console.log(genreInput);
             // console.log(nationalityInput);
             
-            
+            edutForm.addEventListener("submit",function(e){
+                  e.preventDefault()
+
+                  axios.patch(BASE_URL+`/rappers/${id}`,{
+                    name: nameInput.value,
+                    age:ageInput.value,
+                    img:  urlInput.value,
+                    genre: genreInput.value,
+                    nationality: nationalityInput.value,
+                  })
+            })
           })   
         }); 
     });
@@ -187,3 +176,5 @@ function renderSingers(arr) {
     }
   });
 }
+
+
