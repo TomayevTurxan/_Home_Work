@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header d-flex justify-content-between align-items-center">
+                    <div class="imgbox">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/1200px-Marvel_Logo.svg.png">
+                    </div>
+                    <div class="navbar-links ">
+                        <ul class="d-flex align-items-center">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="slider.html">Slider</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section id="slider">
+        <div class="container">
+            <div class="row">
+                <div class="cards-wrapper d-flex flex-wrap mt-5">
+                    <!-- <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span class="slider-title">${slider.title}</span>
+                                <img src="${slider.imageURL}"
+                                    alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="slider-title">${slider.title}</span>
+                                <img src="${slider.imageURL}"
+                                    alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="slider-title">${slider.title}</span>
+                                <img src="${slider.imageURL}"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                
+                        <div class="swiper-scrollbar"></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="modal">
+        <div class="container">
+            <div class="row">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="form">
+                                    <div class="mb-3">
+                                        <label for="editTitle" class="form-label">Ad:</label>
+                                        <input type="text" class="form-control" id="editTitle" placeholder="Enter image title">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editImg" class="form-label">Şəkil:</label>
+                                        <input type="text" class="form-control" id="editImg" placeholder="Enter image url">
+                                    </div>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary save-btn" data-bs-dismiss="modal">Save changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+        integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./assets/scripts/slider.js"></script>
+</body>
+
+</html>

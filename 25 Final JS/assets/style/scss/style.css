@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+a {
+  font-family: "Raleway";
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  background: rgb(218, 245, 192);
+  background: linear-gradient(180deg, rgb(218, 245, 192) 0%, rgba(55, 190, 255, 0.8212535014) 57%, rgba(0, 142, 247, 0.8212535014) 100%);
+  padding: 10px 0px;
+}
+#navbar .navbar-header .imgbox {
+  width: 15%;
+  height: 100%;
+}
+#navbar .navbar-header .imgbox img {
+  width: 100%;
+  cursor: pointer;
+}
+#navbar .navbar-header .navbar-links ul li {
+  margin-right: 15px;
+}
+#navbar .navbar-header .navbar-links ul li a {
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#main .search {
+  width: 50%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#main .search input {
+  width: 80%;
+  padding: 5px;
+}
+#main .search button {
+  margin-top: 30px;
+  width: 30%;
+}
+#main .singer-wrapper .card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+#main .singer-wrapper .detail a {
+  margin-right: 10px;
+}
+#main .singer-wrapper .detail button {
+  margin-right: 10px;
+}
+#main .meal-wrapper .card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+#main .meal-wrapper .detail a {
+  margin-right: 10px;
+}
+#main .meal-wrapper .detail button {
+  margin-right: 10px;
+}
+
+.active {
+  display: block;
+}
+
+.table tbody .img-box {
+  width: 5%;
+}
+.table tbody .img-box img {
+  width: 100%;
+}
+
+#modal .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#modal .modal-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+#modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#modal .close:hover {
+  color: black;
+}
+#modal .form-group {
+  margin: 10px 0;
+}
+#modal .btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
