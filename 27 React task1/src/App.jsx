@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import './App.css'
-import Header from './components/header'
-import Nav from "./components/Nav" 
-import Button from "./components/Button" 
-import About from "./components/About" 
-import Footer from "./components/Footer" 
-import Students from "./components/Students"
+import Header from './components/header/index.jsx'
+import Nav from "./components/Nav/index.jsx" 
+import Button from "./components/Button/index.jsx" 
+import About from "./components/About/index.jsx" 
+import Footer from "./components/Footer/index.jsx" 
+import Students from "./components/Students/index.jsx"
 
 function App() {
   // console.log(students);
