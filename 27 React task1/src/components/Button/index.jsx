@@ -4,7 +4,7 @@ import React from 'react'
 function Button() {
   return (
     <>
-       <p></p> 
+       <button>click me!</button>
     </>
   )
 }

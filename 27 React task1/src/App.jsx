@@ -16,6 +16,7 @@ function App() {
       <About/>
       <Footer/>
       <Students/>
+      <Button/>
     </>
   )
 }
