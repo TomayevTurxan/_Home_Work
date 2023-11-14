@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+.appTodo{
+    margin: 200px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.todo-li{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
