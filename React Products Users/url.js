@@ -1,0 +1,1 @@
+export let BASE_URL = "https://6555d53a84b36e3a431e6f8e.mockapi.io/"
