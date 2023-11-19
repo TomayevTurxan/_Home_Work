@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+#form .headTitle{
+  text-align: center;
+}
+
+
+.inputs{
+  width: 60%;
+  padding: 10px;
+}
+.buttonInput{
+  width: 100%;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.head{
+  margin-top: 50px;
+}
+.albomHead{
+  width: 50%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+.albom {
+  text-align: center;
+}
+.albom h1{
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+  text-align: center;
+  margin-bottom: 0.35em;
+  color: rgba(0, 0, 0, 0.87);
+}
+.albom p{
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.334;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 40px 0px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.call{
+  margin-right: 20px;
+}
