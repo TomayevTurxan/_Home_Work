@@ -11,7 +11,8 @@ import Navbar from "./components/Navbar.jsx";
 import { getAllAlboms } from "./api/albums/index.js";
 import Box from "@mui/material/Box";
 import { Container, Grid } from "@mui/material";
-
+import ButtonFilter from "./components/ButtonFilter.jsx";
+import Button from "@mui/material/Button";
 import "./App.css";
 import Layout from "./components/Layout.jsx";
 function App() {
@@ -37,8 +38,10 @@ function App() {
   return (
     <>
       <Navbar setUser={setUser} />
+      <ButtonFilter alboms={alboms} setAlboms={setAlboms} />
       {user ? (
         <>
+          <Logout setUser={setUser}></Logout>
           <UserL user={user} />
           <AddAlbum />
           <Albums>
@@ -55,6 +58,7 @@ function App() {
                           albom={albom}
                           alboms={alboms}
                           key={idx}
+                          user= {user}
                         />
                       </Grid>
                     );
@@ -63,7 +67,6 @@ function App() {
             </Box>
           </Albums>
           {/* <h4>LogOut</h4> */}
-          <Logout setUser={setUser}></Logout>
         </>
       ) : (
         <>
@@ -82,6 +85,7 @@ function App() {
                           albom={albom}
                           alboms={alboms}
                           key={idx}
+                          albomID={albom.id}
                         />
                       </Grid>
                     );
@@ -89,6 +93,7 @@ function App() {
               </Grid>
             </Box>
           </Albums>
+
           {/* <Login setUser={setUser} /> */}
           {/* <Login setUser={setUser}/> */}
           {/* <Register setUser={setUser} /> */}
