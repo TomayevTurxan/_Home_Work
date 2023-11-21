@@ -53,7 +53,7 @@ const AddEmployee = ({
             let searchEmployees = [...employees].filter((x) =>
               x.name.trim().toLowerCase().includes(e.target.value)
             );
-            setFilteredEmployees([...searchEmployees]);
+              ([...searchEmployees]);
           }}
         />
         <br></br>

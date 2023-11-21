@@ -60,7 +60,8 @@ const Comment = ({ albom, handleClose3 }) => {
         <Rating
           name="simple-controlled"
           value={value}
-          onChange={(event, newValue) => {
+          onChange={(event,newValue) => {
+            console.log(newValue);
             setValue(newValue);
             setRating(newValue);
           }}

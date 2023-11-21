@@ -1,0 +1,76 @@
+.btn {
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    .portfolioBody {
+        min-height: 30rem;
+        position: relative;
+        display: table;
+        width: 100%;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-masthead.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-size: cover;
+        .portfolioTitle {
+            width: 40%;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 4rem;
+            h1 {
+                font-size: 4.5rem;
+                margin-bottom: 1.25rem;
+                color: #212529;
+            }
+
+            h3 {
+                font-size: 1.75rem;
+                color: #212529;
+                margin-bottom: 3rem;
+            }
+
+            button {
+                padding: 1.25rem 2.5rem;
+                background-color: #17667f;
+                color: white;
+                border-radius: 5px;
+                border: none;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        .portfolioBody {
+            .portfolioTitle {
+                width: 80%;
+            }
+            h1{
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+// @media only screen and (min-width: $md) {
+
+// }
+// @media only screen and (min-width: $lg) {
+
+// }
+// @media only screen and (min-width: $xl) {
+
+// }

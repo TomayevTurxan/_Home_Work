@@ -1,0 +1,44 @@
+.footer {
+    padding: 7.5rem 0 4.5rem 0;
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+
+        .links {
+            width: 20%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+
+            .link {
+                text-decoration: none;
+                height: 4rem;
+                width: 4rem;
+                line-height: 4.3rem;
+                font-size: 1.5rem;
+                background-color: #1D809F;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+        }
+
+        p {
+            margin-top: 40px;
+            text-align: center;
+            color: #6c757d;
+        }
+    }
+}
+@media only screen and (max-width: 780px) {
+    .footer {
+        .container {
+            .links {
+               width: 50%;
+            }
+        }
+    }
+}
