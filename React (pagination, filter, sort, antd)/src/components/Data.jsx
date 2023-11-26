@@ -210,32 +210,32 @@ function Data() {
                     />
                     <Box sx={{ flexGrow: 1 }}>
                       <Typography
-                        style={{ cursor: "pointer" }}
-                        onClick={() => beer}
-                        gutterBottom
-                        variant="h5"
-                        component="h2"
+                         style={{ cursor: "pointer" }}
+                         onClick={() => handleOpen(beer)} 
+                         gutterBottom
+                         variant="h5"
+                         component="h2"
                       >
                         {beer.name}
                       </Typography>
                       <Modal
-                        style={{ backgroundColor: "grey", opacity: "0.3" }}
-                        open={selectedBeer !== null}
-                        onClose={handleClose}
-                        aria-labelledby="child-modal-title"
-                        aria-describedby="child-modal-description"
+                          style={{ backgroundColor: "grey", opacity: "0.3" }}
+                          open={selectedBeer !== null}
+                          onClose={handleClose}
+                          aria-labelledby="child-modal-title"
+                          aria-describedby="child-modal-description"
                       >
                         <Box sx={{ ...style, width: 400 }}>
                           {selectedBeer && (
                             <div key={selectedBeer.id}>
                               <p>ID: {selectedBeer.id}</p>
                               <p>Name: {selectedBeer.name}</p>
-                              <p>Tagline: {selectedBeer.tagline}</p>
+                              <p>Tagline: {selectedBeer.food_pairing}</p>
                             </div>
                           )}
                         </Box>
                       </Modal>
-                      <Typography>{beer.tagline}</Typography>
+                      <Typography>Abv:{beer.abv}</Typography>
                     </Box>
                   </Card>
                 </Grid>
