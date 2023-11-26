@@ -28,25 +28,24 @@ const TableApp = () => {
     setSortedInfo({});
   };
 
+  
+  const showModal = (beer) => {
+    setSelectedBeer(beer);
+  };
+  
+  const handleOk = () => {
+    setSelectedBeer(null);
+  };
+  
+  const handleCancel = () => {
+    setSelectedBeer(null);
+  };
   const setAgeSort = () => {
     setSortedInfo({
       order: "descend",
       columnKey: "name",
     });
   };
-
-  const showModal = (beer) => {
-    setSelectedBeer(beer);
-  };
-
-  const handleOk = () => {
-    setSelectedBeer(null);
-  };
-
-  const handleCancel = () => {
-    setSelectedBeer(null);
-  };
-
   const columns = [
     {
       title: "id",
@@ -61,8 +60,7 @@ const TableApp = () => {
       title: "name",
       dataIndex: "name",
       key: "name",
-      filteredValue: filteredInfo.name || null,
-      onFilter: (value, record) => record.name.includes(value),
+      // ... other properties
       sorter: (a, b) => a.name.localeCompare(b.name),
       sortOrder: sortedInfo.columnKey === 'name' ? sortedInfo.order : null,
       ellipsis: true,
@@ -75,11 +73,7 @@ const TableApp = () => {
         text: item.tagline,
         value: item.tagline,
       })),
-      onFilter: (value, record) => {
-        console.log(value)
-        console.log(record)
-        return record.tagline.includes(value)
-      }
+      onFilter: (value, record) => record.tagline.trim().toLowerCase().includes(value.trim().toLowerCase()),
     },
     
     {
