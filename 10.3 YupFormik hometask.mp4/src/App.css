@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 50%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.form .formText {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px -1px 13px 5px rgba(133, 133, 133, 0.75);
+  -webkit-box-shadow: 2px -1px 13px 5px rgba(133, 133, 133, 0.75);
+  -moz-box-shadow: 2px -1px 13px 5px rgba(133, 133, 133, 0.75);
+}
+.form .formText a {
+  margin: 20px 0px;
+  display: block;
+}
+
+
+.input-error{
+  color: red;
+}
