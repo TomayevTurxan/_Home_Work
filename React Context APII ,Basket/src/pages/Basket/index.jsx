@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { BasketContextItem } from "../../services/context/BasketItem";
 import { Input } from "@mui/material";
+import BASE_URL from "../../services/BASE_URL";
+import axios from "axios";
 const onChange = (pagination, filters, sorter, extra) => {
   console.log("params", pagination, filters, sorter, extra);
 };
@@ -14,14 +16,14 @@ const Basket = () => {
   const { basketitem, setBasketItem } = useContext(BasketContextItem);
 
   useEffect(() => {
-    localStorage.setItem("products",JSON.stringify(basketitem))
+    localStorage.setItem("products", JSON.stringify(basketitem));
   }, [basketitem]);
 
   const calculateBasket = (isIncrement, item) => {
     const currentItem = basketitem.find((x) => x.id === item.id);
     if (isIncrement) {
       currentItem.quantity++;
-      console.log(basketitem)
+      console.log(basketitem);
       setBasketItem([...basketitem]);
     } else {
       if (currentItem.quantity == 1) {
@@ -31,7 +33,12 @@ const Basket = () => {
         setBasketItem([...basketitem]);
       }
     }
+  };
 
+  
+  const removeItem = async (productId) => {
+      const updatedBasket = basketitem.filter((item) => item.id !== productId);
+      setBasketItem(updatedBasket);
   };
   const columns = [
     {
@@ -76,6 +83,16 @@ const Basket = () => {
             </div>
             <Button onClick={() => calculateBasket(false, record)}>-</Button>
           </div>
+        </>
+      ),
+    },
+    {
+      title: "Remove",
+      render: (text, record) => (
+        <>
+          <Button
+           onClick={() => removeItem(record.id)}
+          >Remove</Button>
         </>
       ),
     },
