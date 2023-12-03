@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext, createContext } from "react";
 import Album from "./components/Album.jsx";
 import Albums from "./components/Albums.jsx";
 import AddAlbum from "./components/AddAlbum.jsx";
@@ -15,11 +15,14 @@ import ButtonFilter from "./components/ButtonFilter.jsx";
 import Button from "@mui/material/Button";
 import "./App.css";
 import Layout from "./components/Layout.jsx";
+import Example from "./components/Example.jsx";
+import AlbomContextProvider, { AlbomContext } from "./services/content/AlbomsContext.jsx";
 function App() {
-  let [alboms, setAlboms] = useState([]);
+  // let [alboms, setAlboms] = useState([]);
+  let { alboms, setAlboms } = useContext(AlbomContext);
+  let { name, setName } = useContext(AlbomContext);
   let [whishList, setWhishList] = useState();
   let [user, setUser] = useState(null);
-
   if (JSON.parse(localStorage.getItem("whishList"))) {
     setWhishList(JSON.parse(localStorage.getItem("whishList")));
   }
@@ -30,75 +33,90 @@ function App() {
 
   useEffect(() => {
     getAllAlboms().then((res) => {
-      console.log(res);
+      // console.log(res);
       setAlboms(res);
     });
   }, []);
+  // console.log(alboms);
+  console.log("alboms", alboms);
 
-  return (
+ return (
     <>
-      <Navbar setUser={setUser} />
-      <ButtonFilter alboms={alboms} setAlboms={setAlboms} />
-      {user ? (
-        <>
-          <Logout setUser={setUser}></Logout>
-          <UserL user={user} />
-          <AddAlbum />
-          <Albums>
-            <Box>
-              <Grid container spacing={3}>
-                {alboms &&
-                  alboms.map((albom, idx) => {
-                    return (
-                      <Grid key={idx} item xs={12} md={6} lg={4}>
-                        <Album
-                          setWhishList={setWhishList}
-                          whishList={whishList}
-                          isAdmin={user?.isAdmin}
-                          albom={albom}
-                          alboms={alboms}
-                          key={idx}
-                          user= {user}
-                        />
-                      </Grid>
-                    );
-                  })}
-              </Grid>
-            </Box>
-          </Albums>
-          {/* <h4>LogOut</h4> */}
-        </>
-      ) : (
-        <>
-          <Layout></Layout>
-          <Albums>
-            <Box>
-              <Grid container spacing={3}>
-                {alboms &&
-                  alboms.map((albom, idx) => {
-                    return (
-                      <Grid key={idx} item xs={12} md={6} lg={4}>
-                        <Album
-                          setWhishList={setWhishList}
-                          whishList={whishList}
-                          isAdmin={user?.isAdmin}
-                          albom={albom}
-                          alboms={alboms}
-                          key={idx}
-                          albomID={albom.id}
-                        />
-                      </Grid>
-                    );
-                  })}
-              </Grid>
-            </Box>
-          </Albums>
+      <AlbomContextProvider>
+        {/* <button onClick={()=>{
+            console.log("name", name);
+        }}>testqqq</button> */}
+        {
+        }
+        {/* <Example />
+        <ul>
+          {alboms && alboms.map((albom, idx) => {
+            return <li key={idx}>{albom.name}</li>;
+          })}
+        </ul> */}
+        <Navbar setUser={setUser} />
+        <ButtonFilter alboms={alboms} setAlboms={setAlboms} />
+        {user ? (
+          <>
+            <Logout setUser={setUser}></Logout>
+            <UserL user={user} />
+            <AddAlbum />
+            <Albums>
+              <Box>
+                <Grid container spacing={3}>
+                  {alboms &&
+                    alboms.map((albom, idx) => {
+                      return (
+                        <Grid key={idx} item xs={12} md={6} lg={4}>
+                          <Album
+                            setWhishList={setWhishList}
+                            whishList={whishList}
+                            isAdmin={user?.isAdmin}
+                            albom={albom}
+                            alboms={alboms}
+                            key={idx}
+                            user={user}
+                          />
+                        </Grid>
+                      );
+                    })}
+                </Grid>
+              </Box>
+            </Albums>
+            {/* <h4>LogOut</h4> */}
+          </>
+        ) : (
+          <>
+            <Layout></Layout>
+            <Albums>
+              <Box>
+                <Grid container spacing={3}>
+                  {alboms &&
+                    alboms.map((albom, idx) => {
+                      return (
+                        <Grid key={idx} item xs={12} md={6} lg={4}>
+                          <Album
+                            setWhishList={setWhishList}
+                            whishList={whishList}
+                            isAdmin={user?.isAdmin}
+                            albom={albom}
+                            alboms={alboms}
+                            key={idx}
+                            albomID={albom.id}
+                          />
+                        </Grid>
+                      );
+                    })}
+                </Grid>
+              </Box>
+            </Albums>
 
-          {/* <Login setUser={setUser} /> */}
-          {/* <Login setUser={setUser}/> */}
-          {/* <Register setUser={setUser} /> */}
-        </>
-      )}
+            {/* <Login setUser={setUser} /> */}
+            {/* <Login setUser={setUser}/> */}
+            {/* <Register setUser={setUser} /> */}
+          </>
+        )}
+      </AlbomContextProvider>
     </>
   );
 }

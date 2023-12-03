@@ -1,0 +1,11 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.title{
+    color: darkred;
+    font-style: italic;
+    font-size: 30px;
+}

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { PropTypes } from "prop-types";
 import { getAllUsers } from "../api/users";
 import { Container, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
+import { CurrentUser } from "../services/CurrentUser";
 // import TextField from '@mui/material/TextField';
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -15,8 +16,8 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Login = ({ setUser }) => {
-  let [currentUser, setCurrentUser] = useState({ name: "", password: "" });
-
+  // let [currentUser, setCurrentUser] = useState({ name: "", password: "" });
+  let {currentUser,setCurrentUser} = useContext(CurrentUser)
   const handleSubmit = (e) => {
     e.preventDefault();
     getAllUsers().then((res) => {
