@@ -26,7 +26,7 @@ interface IVehicle<T> {
 }
 
 class Car implements IVehicle<number> {
-  public _brandName: string;
+  brandName: string;
   private _modelName: string;
   private _year: number;
   private _fuelCapacity: number;
@@ -47,7 +47,7 @@ class Car implements IVehicle<number> {
     engine: EngineType,
     vehicleType: VehicleType
   ) {
-    this._brandName = brandName;
+    this.brandName = brandName;
     this._modelName = modelName;
     this._year = year;
     this._fuelCapacity = fuelCapacity;
@@ -57,9 +57,7 @@ class Car implements IVehicle<number> {
     this._engine = engine;
     this._vehicleType = vehicleType;
   }
-  get brandName(): string {
-    return this._brandName;
-  }
+
   get modelName(): string {
     return this._modelName;
   }
@@ -89,7 +87,7 @@ class Car implements IVehicle<number> {
   }
   getInfo(): void {
     console.log(`
-      Brand: ${this._brandName}
+      Brand: ${this.brandName}
       Model: ${this._modelName}
       Year: ${this._year}
       Fuel Capacity: ${this._fuelCapacity}
@@ -115,7 +113,7 @@ class Car implements IVehicle<number> {
 }
 
 class Motorcycle implements IVehicle<number> {
-  public _brandName: string;
+  brandName: string;
   private _modelName: string;
   private _year: number;
   private _fuelCapacity: number;
@@ -136,7 +134,7 @@ class Motorcycle implements IVehicle<number> {
     engine: EngineType,
     vehicleType: VehicleType
   ) {
-    this._brandName = brandName;
+    this.brandName = brandName;
     this._modelName = modelName;
     this._year = year;
     this._fuelCapacity = fuelCapacity;
@@ -147,9 +145,7 @@ class Motorcycle implements IVehicle<number> {
     this._vehicleType = vehicleType;
   }
 
-  get brandName(): string {
-    return this._brandName;
-  }
+ 
 
   get modelName(): string {
     return this._modelName;
@@ -185,7 +181,7 @@ class Motorcycle implements IVehicle<number> {
 
   getInfo(): void {
     console.log(`
-        Brand: ${this._brandName}
+        Brand: ${this.brandName}
         Model: ${this._modelName}
         Year: ${this._year}
         Fuel Capacity: ${this._fuelCapacity}
@@ -212,7 +208,7 @@ class Motorcycle implements IVehicle<number> {
 
   startEngine(): void {
     console.log(
-      `${this._brandName} ${this._modelName}'s engine is now running`
+      `${this.brandName} ${this._modelName}'s engine is now running`
     );
   }
 }
