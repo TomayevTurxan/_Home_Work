@@ -12,7 +12,7 @@ var EngineType;
 var Capacity;
 var Car = /** @class */ (function () {
     function Car(brandName, modelName, year, fuelCapacity, currentFuel, mileage, fuelFor1KM, engine, vehicleType) {
-        this._brandName = brandName;
+        this.brandName = brandName;
         this._modelName = modelName;
         this._year = year;
         this._fuelCapacity = fuelCapacity;
@@ -22,13 +22,6 @@ var Car = /** @class */ (function () {
         this._engine = engine;
         this._vehicleType = vehicleType;
     }
-    Object.defineProperty(Car.prototype, "brandName", {
-        get: function () {
-            return this._brandName;
-        },
-        enumerable: false,
-        configurable: true
-    });
     Object.defineProperty(Car.prototype, "modelName", {
         get: function () {
             return this._modelName;
@@ -86,7 +79,7 @@ var Car = /** @class */ (function () {
         configurable: true
     });
     Car.prototype.getInfo = function () {
-        console.log("\n      Brand: ".concat(this._brandName, "\n      Model: ").concat(this._modelName, "\n      Year: ").concat(this._year, "\n      Fuel Capacity: ").concat(this._fuelCapacity, "\n      Current Fuel: ").concat(this._currentFuel, "\n      Mileage: ").concat(this._mileage, "\n      Fuel Consumption: ").concat(this._fuelFor1KM, "\n      Engine Type: ").concat(this._engine, "\n      Vehicle Type: ").concat(this._vehicleType, "\n    "));
+        console.log("\n      Brand: ".concat(this.brandName, "\n      Model: ").concat(this._modelName, "\n      Year: ").concat(this._year, "\n      Fuel Capacity: ").concat(this._fuelCapacity, "\n      Current Fuel: ").concat(this._currentFuel, "\n      Mileage: ").concat(this._mileage, "\n      Fuel Consumption: ").concat(this._fuelFor1KM, "\n      Engine Type: ").concat(this._engine, "\n      Vehicle Type: ").concat(this._vehicleType, "\n    "));
     };
     Car.prototype.drive = function (km) {
         var fuelRequire = km / this._fuelFor1KM;
@@ -104,7 +97,7 @@ var Car = /** @class */ (function () {
 }());
 var Motorcycle = /** @class */ (function () {
     function Motorcycle(brandName, modelName, year, fuelCapacity, currentFuel, mileage, fuelFor1KM, engine, vehicleType) {
-        this._brandName = brandName;
+        this.brandName = brandName;
         this._modelName = modelName;
         this._year = year;
         this._fuelCapacity = fuelCapacity;
@@ -114,13 +107,6 @@ var Motorcycle = /** @class */ (function () {
         this._engine = engine;
         this._vehicleType = vehicleType;
     }
-    Object.defineProperty(Motorcycle.prototype, "brandName", {
-        get: function () {
-            return this._brandName;
-        },
-        enumerable: false,
-        configurable: true
-    });
     Object.defineProperty(Motorcycle.prototype, "modelName", {
         get: function () {
             return this._modelName;
@@ -178,7 +164,7 @@ var Motorcycle = /** @class */ (function () {
         configurable: true
     });
     Motorcycle.prototype.getInfo = function () {
-        console.log("\n        Brand: ".concat(this._brandName, "\n        Model: ").concat(this._modelName, "\n        Year: ").concat(this._year, "\n        Fuel Capacity: ").concat(this._fuelCapacity, "\n        Current Fuel: ").concat(this._currentFuel, "\n        Mileage: ").concat(this._mileage, "\n        Fuel Consumption: ").concat(this._fuelFor1KM, "\n        Engine Type: ").concat(this._engine, "\n        Vehicle Type: ").concat(this._vehicleType, "\n      "));
+        console.log("\n        Brand: ".concat(this.brandName, "\n        Model: ").concat(this._modelName, "\n        Year: ").concat(this._year, "\n        Fuel Capacity: ").concat(this._fuelCapacity, "\n        Current Fuel: ").concat(this._currentFuel, "\n        Mileage: ").concat(this._mileage, "\n        Fuel Consumption: ").concat(this._fuelFor1KM, "\n        Engine Type: ").concat(this._engine, "\n        Vehicle Type: ").concat(this._vehicleType, "\n      "));
     };
     Motorcycle.prototype.drive = function (km) {
         var fuelRequire = km / this._fuelFor1KM;
@@ -193,7 +179,7 @@ var Motorcycle = /** @class */ (function () {
         }
     };
     Motorcycle.prototype.startEngine = function () {
-        console.log("".concat(this._brandName, " ").concat(this._modelName, "'s engine is now running"));
+        console.log("".concat(this.brandName, " ").concat(this._modelName, "'s engine is now running"));
     };
     return Motorcycle;
 }());
