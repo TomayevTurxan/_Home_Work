@@ -24,7 +24,7 @@ const AdminNavbar = () => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          {user && user.isAdmin ? 'Admin Side' : 'User Side'}
+          {'Admin Side'}
         </Typography>
         {user && user.isAdmin && (
           <>

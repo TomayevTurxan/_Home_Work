@@ -1,5 +1,5 @@
 import { Button, Table } from "antd";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { getAllProducts } from "../../services/product";
 import Swal from "sweetalert2";
 import { BasketContext } from "../../services/context/BasketContext";

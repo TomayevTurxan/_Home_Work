@@ -1,13 +1,6 @@
 import { Button, Table } from "antd";
-import { useContext, useEffect, useState } from "react";
-import { getAllProducts } from "../../services/product";
-import Swal from "sweetalert2";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useContext, useEffect } from "react";
 import { BasketContextItem } from "../../services/context/BasketItem";
-import { Input } from "@mui/material";
-import BASE_URL from "../../services/BASE_URL";
-import axios from "axios";
 const onChange = (pagination, filters, sorter, extra) => {
   console.log("params", pagination, filters, sorter, extra);
 };

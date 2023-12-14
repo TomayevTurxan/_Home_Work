@@ -65,6 +65,12 @@
       "password": "ttt",
       "isAdmin": true,
       "id": 11
+    },
+    {
+      "username": "bbb",
+      "password": "bbb",
+      "isAdmin": true,
+      "id": 12
     }
   ],
   "categories": [
