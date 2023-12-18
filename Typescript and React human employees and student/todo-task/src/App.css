@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+.todoApp {
+  background-color: white;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 4% auto;
+  align-items: center;
+  border-radius:10px;
+}
+li{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  margin: 20px 0px;
+}
+.btn input{
+  height: 35px;
+}
+.btn button{
+  padding: 10px 5px;
+  background-color: red;
+  border: none;
+  color: white;
+}
+.edit{
+  margin-right: 5px;
+  margin-left: 50px;
+  width: 10%;
+  padding: 7px 5px;
+  background-color:#66bb6a;
+  border: none;
+  color: white;
+}
+.remove{
+  padding: 7px 5px;
+  background-color:#e74135;
+  border: none;
+  color: white;
+}
+.todoUl{
+  width: 100%;
+}

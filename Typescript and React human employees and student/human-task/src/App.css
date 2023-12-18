@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.humanTask {
+  background-color: white;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 4% auto;
+  align-items: center;
+  border-radius: 10px;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
