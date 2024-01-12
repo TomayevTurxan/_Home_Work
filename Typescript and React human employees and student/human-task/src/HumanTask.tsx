@@ -4,13 +4,13 @@ import "./App.css";
 interface FormData {
   name: string;
   surname: string;
-  age: number | null;
+  age: number;
   type: string;
-  salary: number | null;
+  salary: number;
   skills: string;
   position: string;
   groupName: string;
-  gpa: number | null;
+  gpa: number;
   hobbies: string;
 }
 
@@ -18,13 +18,13 @@ const HumanTask = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     surname: "",
-    age: null,
+    age: 0,
     type: "default",
-    salary: null,
+    salary: 0,
     skills: "",
     position: "",
     groupName: "",
-    gpa: null,
+    gpa: 0,
     hobbies: "",
   });
 
@@ -45,13 +45,13 @@ const HumanTask = () => {
     setFormData({
       name: "",
       surname: "",
-      age: null,
+      age: 0,
       type: "default",
-      salary: null,
+      salary: 0,
       skills: "",
       position: "0",
       groupName: "",
-      gpa: null,
+      gpa: 0,
       hobbies: "",
     });
   };
@@ -61,13 +61,13 @@ const HumanTask = () => {
     setFormData({
       name: "",
       surname: "",
-      age: null,
+      age: 0,
       type: "default",
-      salary: null,
+      salary: 0,
       skills: "",
       position: "0",
       groupName: "",
-      gpa: null,
+      gpa: 0,
       hobbies: "",
     });
   };

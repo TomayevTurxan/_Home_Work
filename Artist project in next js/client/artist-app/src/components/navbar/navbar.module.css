@@ -1,0 +1,11 @@
+.container{
+    max-width: 100%!important;
+    background-color: black;
+    color: white
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
